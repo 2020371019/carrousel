@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    cargadatos(); // Call the function to load data
+    cargadatos(); 
 });
 
 function cargadatos() {
@@ -8,29 +8,42 @@ function cargadatos() {
         .then(products => {
             console.log(products);
             let carrouselInner = document.getElementById("carrousel");
-            carrouselInner.innerHTML = ""; // Clear previous items
+            carrouselInner.innerHTML = ""; 
 
             products.forEach((product, index) => {
                 let carouselItem = document.createElement("div");
                 carouselItem.className = "carousel-item" + (index === 0 ? " active" : "");
 
+                let card = document.createElement("div");
+                card.className = "card text-center";
+
                 let img = document.createElement("img");
                 img.src = product.image;
-                img.className = "d-block w-100";
+                img.className = "card-img-top";
                 img.alt = product.title;
                 img.dataset.id = product.id;
 
-                let titleDiv = document.createElement("div");
+                let cardBody = document.createElement("div");
+                cardBody.className = "card-body";
+
+                let titleDiv = document.createElement("h5");
+                titleDiv.className = "card-title";
                 titleDiv.textContent = product.title;
-                let precDiv = document.createElement("div");
+
+                let precDiv = document.createElement("p");
+                precDiv.className = "card-text";
                 precDiv.textContent = `$${product.price}`;
-                let categoryDiv = document.createElement("div");
+
+                let categoryDiv = document.createElement("p");
+                categoryDiv.className = "card-text";
                 categoryDiv.textContent = product.category;
 
-                carouselItem.appendChild(categoryDiv);
-                carouselItem.appendChild(titleDiv);
-                carouselItem.appendChild(precDiv);
-                carouselItem.appendChild(img);
+                cardBody.appendChild(titleDiv);
+                cardBody.appendChild(precDiv);
+                cardBody.appendChild(categoryDiv);
+                card.appendChild(img);
+                card.appendChild(cardBody);
+                carouselItem.appendChild(card);
                 carrouselInner.appendChild(carouselItem);
             });
 
@@ -42,7 +55,7 @@ function cargadatos() {
 }
 
 function initializeCarousel() {
-    let carouselElement = document.querySelector('#carouselExampleControls');
+    let carouselElement = document.querySelector('#carouselExampleDark');
     let prevButton = carouselElement.querySelector('.carousel-control-prev');
     let nextButton = carouselElement.querySelector('.carousel-control-next');
     let items = carouselElement.querySelectorAll('.carousel-item');
@@ -64,13 +77,5 @@ function initializeCarousel() {
         showItem(currentIndex);
     });
 
-    // Add click event listener to images
-    carouselElement.addEventListener('click', function(event) {
-        if (event.target.tagName === 'IMG') {
-            let productId = event.target.dataset.id;
-            window.location.href = `/again/inicio/product/${productId}`;
-        }
-    });
-
-    showItem(currentIndex); // Initialize the carousel with the first item
+    showItem(currentIndex);
 }

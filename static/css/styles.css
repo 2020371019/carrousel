@@ -1,7 +1,10 @@
-.carousel-item img {
-    width: 50%;
-    height: 500px; /* Ajusta la altura según tus necesidades */
-    object-fit: cover; /* Esto asegurará que la imagen se recorte para llenar el contenedor manteniendo su relación de aspecto */
+
+.carousel-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
-
-
+.card {
+    max-width: 500px;
+}
