@@ -1,10 +1,6 @@
-
-.carousel-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-.card {
-    max-width: 500px;
+.carousel-item img {
+    width: 50%;
+    height: 500px; 
+    object-fit: cover;
+    text-align: center;
 }

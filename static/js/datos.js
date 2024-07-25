@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    cargadatos(); 
+    cargadatos(); // Call the function to load data
 });
 
 function cargadatos() {
