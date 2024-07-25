@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <title>Product Details</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
 </head>
 <body>
     <div class="container">
@@ -16,8 +15,9 @@
                 <div class="card-body">
                     <h5 class="card-title"><?php echo $product['title']; ?></h5>
                     <p class="card-text">Price: $<?php echo $product['price']; ?></p>
-                    <p class="card-text">Category: <?php echo $product['category']; ?></p>
                     <p class="card-text"><?php echo $product['description']; ?></p>
+                    <p class="card-text">Rating: <?php echo $product['rating']['rate']; ?></p>
+                    <p class="card-text">Cantidad Disponibles:<?php echo $product['rating']['count']; ?></p>
                 </div>
             </div>
         <?php else: ?>

@@ -18,12 +18,12 @@ function cargadatos() {
                 img.src = product.image;
                 img.className = "d-block w-100";
                 img.alt = product.title;
-                img.dataset.id = product.id; // Set data-id attribute for the product ID
+                img.dataset.id = product.id;
 
                 let titleDiv = document.createElement("div");
                 titleDiv.textContent = product.title;
                 let precDiv = document.createElement("div");
-                precDiv.textContent = product.price;
+                precDiv.textContent = `$${product.price}`;
                 let categoryDiv = document.createElement("div");
                 categoryDiv.textContent = product.category;
 
