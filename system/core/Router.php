@@ -331,7 +331,8 @@ class CI_Router {
 		$uri = implode('/', $this->uri->segments);
 
 		// Get HTTP verb
-		$http_verb = strtolower($this->uri->method());
+		$http_verb = strtolower($_SERVER['REQUEST_METHOD']);
+
 
 		// Is there a literal match?  If so we're done
 		if (isset($this->routes[$uri]))
