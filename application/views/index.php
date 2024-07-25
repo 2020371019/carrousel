@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
     <script src="http://localhost/again/static/js/datos.js" defer></script>
     <link rel="stylesheet" href="http://localhost/again/static/css/styles.css">
-    <title>Hola</title>
+    <title>Soy development</title>
 </head>
 <body>
     
