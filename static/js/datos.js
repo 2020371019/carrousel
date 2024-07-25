@@ -68,7 +68,7 @@ function initializeCarousel() {
     carouselElement.addEventListener('click', function(event) {
         if (event.target.tagName === 'IMG') {
             let productId = event.target.dataset.id;
-            window.location.href = `/inicio/product/${productId}`;
+            window.location.href = `/again/inicio/product/${productId}`;
         }
     });
 
